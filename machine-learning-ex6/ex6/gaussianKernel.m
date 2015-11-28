@@ -15,11 +15,8 @@ sim = 0;
 %               sigma
 %
 %
-
-
-
-
-
+% evaluate simularity between x1 and x2
+sim=exp(-(x1-x2)'*(x1-x2)/(2*sigma^2));
 
 % =============================================================
     
