@@ -20,13 +20,13 @@ idx = zeros(size(X,1), 1);
 %
 % Note: You can use a for-loop over the examples to compute this.
 %
-
-
-
-
-
-
-
+for i=1:size(X,1)
+    % each row in distance_vec is the distance vector from X(i,:)
+    distance_vec=bsxfun(@minus,centroids,X(i,:));
+    % each element in distance is the sum of square of distance_vec
+    distance=sum(distance_vec.^2,2);
+    idx_min=find(distance==min(distance));
+    idx(i)=idx_min(1);
 % =============================================================
 
 end

@@ -27,7 +27,7 @@ clear ; close all; clc
 %
 fprintf('Visualizing example dataset for PCA.\n\n');
 
-%  The following command loads the dataset. You should now have the 
+%  The following command loads the dataset. Youshould now have the 
 %  variable X in your environment
 load ('ex7data1.mat');
 
@@ -37,6 +37,7 @@ axis([0.5 6.5 2 8]); axis square;
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
+
 
 
 %% =============== Part 2: Principal Component Analysis ===============
@@ -54,7 +55,7 @@ fprintf('\nRunning PCA on example dataset.\n\n');
 %  Compute mu, the mean of the each feature
 
 %  Draw the eigenvectors centered at mean of data. These lines show the
-%  directions of maximum variations in the dataset.
+%  directions of maximum variations in the d ataset.
 hold on;
 drawLine(mu, mu + 1.5 * S(1,1) * U(:,1)', '-k', 'LineWidth', 2);
 drawLine(mu, mu + 1.5 * S(2,2) * U(:,2)', '-k', 'LineWidth', 2);

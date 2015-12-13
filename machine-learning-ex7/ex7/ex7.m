@@ -108,12 +108,19 @@ fprintf('\nRunning K-Means clustering on pixels from an image.\n\n');
 %  Load an image of a bird
 A = double(imread('bird_small.png'));
 
+% resize
+A=imresize(A,'nearest','OutputSize',[120,120]);
+
 % If imread does not work for you, you can try instead
 %   load ('bird_small.mat');
 
-A = A / 255; % Divide by 255 so that all values are in the range 0 - 1
+
+A = A / 255; % Divide by 255 so that all values are in the range 0 - 1% 
+
+
 
 % Size of the image
+
 img_size = size(A);
 
 % Reshape the image into an Nx3 matrix where N = number of pixels.
@@ -144,7 +151,7 @@ pause;
 %  each example. After that, we 
 
 fprintf('\nApplying K-Means to compress an image.\n\n');
-
+ 
 % Find closest cluster members
 idx = findClosestCentroids(X, centroids);
 
